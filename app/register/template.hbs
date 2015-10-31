@@ -1,0 +1,42 @@
+<div id="register">
+  <div class="register-cover">
+    <img src="assets/images/signup-cover.png">
+  </div>
+  <div class="container">
+    <form class="register-form" {{action "register" on="submit"}}>
+      <div class="form-group">
+        <label>Player</label>
+        {{input type="text" value=participant placeholder="Select your player" class="form-control"}}
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary-outline">Add a new player</button>
+      </div>
+      <div class="form-group">
+        <label>How did you hear about Coerver?</label>
+        {{input type="text" value=reference placeholder="Reference" class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label>Club team</label>
+        {{input type="text" value=club placeholder="Club team" class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label>Emergency contact phone number</label>
+        {{input type="text" value=emergency placeholder="Phone number" class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label>Comments</label>
+        {{textarea value=comments placeholder="Comments" class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label>Credit card</label>
+        {{input type="text" value=participant placeholder="Select your credit card" class="form-control"}}
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary-outline">Add a new credit card</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+{{outlet}}

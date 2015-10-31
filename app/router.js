@@ -8,8 +8,12 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('signup');
   this.route('login');
-  this.route('authenicated');
-  this.route('account');
+  this.route('account', function() {
+    this.route('players');
+    this.route('registrations');
+  });
+  this.route('authenticated');
+  this.route('register');
 });
 
 export default Router;

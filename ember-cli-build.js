@@ -5,7 +5,7 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults);
 
   app.import('bower_components/bootstrap/dist/css/bootstrap.css');
-  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
   app.import('bower_components/font-awesome/css/font-awesome.css');
 
   if (app.env === 'development') {

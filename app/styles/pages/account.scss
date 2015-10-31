@@ -1,0 +1,22 @@
+#account {
+  .account-cover {
+    img {
+      width: 100%;
+    }
+  }
+
+  .account-nav {
+    margin-top: -41px;
+    position: absolute;
+
+    .nav-item {
+      .nav-link.active {
+        color: #0275d8;
+      }
+
+      .nav-link {
+        color: white;
+      }
+    }
+  }
+}

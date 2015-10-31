@@ -1,0 +1,45 @@
+<form class="account-info">
+  <div class="form-group">
+    <label>First name</label>
+    {{input type="text" class="form-control" placeholder="First name" value=model.firstName}}
+  </div>
+  <div class="form-group">
+    <label>Last name</label>
+    {{input type="text" class="form-control" placeholder="Last name" value=model.lastName}}
+  </div>
+  <div class="form-group">
+    <label>Email address</label>
+    {{input type="text" class="form-control" placeholder="Email address" value=model.email}}
+  </div>
+  <div class="form-group">
+    <label>Phone number</label>
+    {{input type="text" class="form-control" placeholder="Phone number" value=model.phone}}
+  </div>
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="form-group">
+        <label>Street address</label>
+        {{input type="text" class="form-control" placeholder="Street" value=model.street}}
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <label>City</label>
+        {{input type="text" class="form-control" placeholder="City" value=model.city}}
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="form-group">
+        <label>State</label>
+        {{input type="text" class="form-control" placeholder="State" value=model.state}}
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="form-group">
+        <label>Zip</label>
+        {{input type="text" class="form-control" placeholder="Zip" value=model.zip}}
+      </div>
+    </div>
+  </div>
+</form>
+{{outlet}}

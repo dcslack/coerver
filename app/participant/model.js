@@ -7,5 +7,4 @@ export default DS.Model.extend({
   lastName: attr('string'),
   gender: attr('string'),
   birthday: attr('date'),
-  user: belongsTo('user'),
 });

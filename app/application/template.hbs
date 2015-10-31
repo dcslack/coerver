@@ -7,28 +7,26 @@
       <div class="container">
         <a class="navbar-brand" href="#">Coerver Colorado</a>
         <ul class="nav navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
+          {{#link-to "register" class="nav-item"}}
+            <a class="nav-link" href="#">Register</a> 
+          {{/link-to}}
         </ul>
         <ul class="nav navbar-nav pull-right">
           {{#if account.isLoggedIn}}
             {{#link-to "account" class="nav-item"}}
-              <a class="nav-link" href="#">Account</a>
+              <a class="nav-link" href="#">{{account.currentUser.firstName}}</a>
             {{/link-to}}
+            <li class="nav-item" {{action "logout"}}>
+              <a class="nav-link" href="#">Logout</a>
+            </li>
           {{else}}
-
+            {{#link-to "login" class="nav-item"}}
+              <a class="nav-link" href="#">Login</a>
+            {{/link-to}}
+            {{#link-to "signup" class="nav-item"}}
+              <a class="nav-link" href="#">Signup</a>
+            {{/link-to}}
           {{/if}}
-
         </ul>
       </div>
     </div>
@@ -39,7 +37,7 @@
     </div>
   </div>
   <footer class="container-fluid">
-    <div class="text-center">
+    <div class="text-center p-a">
       <span class="text-muted"><i class="fa fa-copyright"></i>&nbsp; Coerver Colorado</span>
     </div>
   </footer>

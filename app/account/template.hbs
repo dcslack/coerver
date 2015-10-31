@@ -1,1 +1,21 @@
-{{outlet}}
+<div id="account">
+  <div class="account-cover">
+    <img src="assets/images/signup-cover.png">
+  </div>
+  <div class="container">
+    <ul class="account-nav nav nav-tabs">
+      <li class="nav-item">
+        {{#link-to "account.index" class="nav-link"}}Info{{/link-to}}
+      </li>
+      <li class="nav-item">
+        {{#link-to "account.registrations" class="nav-link"}}Registrations{{/link-to}}
+      </li>
+      <li class="nav-item">
+        {{#link-to "account.players" class="nav-link"}}Players{{/link-to}}
+      </li>
+    </ul>
+  </div>
+  <div class="container m-t">
+    {{outlet}}
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:authenicated', 'Unit | Route | authenicated', {
+moduleFor('route:account/players', 'Unit | Route | account/players', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

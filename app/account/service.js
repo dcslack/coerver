@@ -11,8 +11,11 @@ export default Ember.Service.extend({
   }),
 
   logout() {
-    this.get('cookie').removeCookie('coerver-id');
-    this.set('currentUser', null);
+    return new Promise(resolve => {
+      this.get('cookie').removeCookie('coerver-id');
+      this.set('currentUser', null);
+      resolve();
+    });
   },
 
   login(email, password) {

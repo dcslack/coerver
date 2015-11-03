@@ -30,7 +30,7 @@ export default Ember.Controller.extend({
             account.set('currentUser', user);
 
             this.get('cookie').setCookie('coerver-id', res.token).then(() => {
-              this.transitionToRoute('index');
+              this.transitionToRoute('account');
             });
           }
         }, () => {

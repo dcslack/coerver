@@ -1,1 +1,7 @@
-{{outlet}}
+<div class="account-registrations">
+  {{#each model.registrations as |registration|}}
+
+  {{else}}
+  <p>You do not have any registrations. You can {{#link-to "register"}}register here{{/link-to}}.</p>
+  {{/each}}
+</div>

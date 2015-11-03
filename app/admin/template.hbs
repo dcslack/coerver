@@ -1,0 +1,14 @@
+<div id="admin">
+  <div class="admin-box col-md-4 col-lg-4 col-sm-6 col-md-offset-4 col-lg-offset-4 col-sm-offset-3 p-a-lg m-t-lg">
+    <form {{action "verify" on="submit"}}>
+      <p>Admin password</p>
+      <div class="form-group">
+        {{input type="password" class="form-control" value=admin placeholder="Enter the password"}}
+      </div>
+      <button type="submit" name="button" class="btn btn-primary-outline btn-block">
+        <i class="fa fa-sign-in"></i>&nbsp; Submit
+      </button>
+    </form>
+  </div>
+</div>
+{{outlet}}

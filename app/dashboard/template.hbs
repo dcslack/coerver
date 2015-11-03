@@ -1,0 +1,41 @@
+<div id="dashboard">
+  <div class="dashboard-wrapper p-t">
+    <div class="dashboard-nav col-md-3 col-lg-2 col-sm-4 col-xs-12">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="nav-item">
+          {{#link-to "dashboard.index" class="nav-link"}}Home{{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to "dashboard.coaches" class="nav-link"}}Coaches{{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to "dashboard.curriculums" class="nav-link"}}Curriculums{{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to "dashboard.grades" class="nav-link"}}Grades{{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to "dashboard.participants" class="nav-link"}}Players{{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to "dashboard.records" class="nav-link"}}Records{{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to "dashboard.registrations" class="nav-link"}}Registrations{{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to "dashboard.sessions" class="nav-link"}}Sessions{{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to "dashboard.stats" class="nav-link"}}Stats{{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to "dashboard.users" class="nav-link"}}Users{{/link-to}}
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-9 col-lg-10 col-sm-8 col-xs-12">
+      {{outlet}}
+    </div>
+  </div>
+</div>

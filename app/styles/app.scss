@@ -1,5 +1,6 @@
 @import "variables";
 @import "pages/account";
+@import "pages/admin";
 @import "pages/application";
 @import "pages/footer";
 @import "pages/index";
@@ -9,4 +10,20 @@
 
 body {
   font-weight: 300;
+}
+
+.select2-container {
+  height: 38px;
+
+  .select2-choice.select2-default {
+    box-shadow: none;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .select2-choice {
+    height: 38px;
+    font-size: 16px;
+    box-shadow: none;
+  }
 }

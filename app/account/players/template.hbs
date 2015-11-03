@@ -1,11 +1,56 @@
 <div class="account-players">
-  {{#each model as |player|}}
-    <div class="player">
+  <div class="row">
+    <div class="col-md-6 col-lg-6">
+      {{#each model.participants as |player|}}
+        <div class="player">
 
+        </div>
+      {{else}}
+        <p>
+          You don't have any players under your account. If you've attended previous Coerver camps,
+          please search for your child's last name and add him or her to your profile. If you child
+          does not show up, please add him or her using the form.
+        </p>
+      {{/each}}
     </div>
-  {{else}}
-    <p>You don't have any players under your account. Search for the player's last name and birthday, or add a new one with the form below</p>
-  {{/each}}
+    <div class="col-md-6 col-lg-6">
+      <form {{action "addPlayer" on="submit"}}>
+        <div class="form-group">
+          <label>Search for a player already in the database</label>
+          {{input type="text" placeholder="Search for a player's last name" value=player class="form-control"}}
+        </div>
+        <div class="form-group">
+          <label>First name</label>
+          {{input type="text" required=true placeholder="Child's first name" value=firstName class="form-control"}}
+        </div>
+        <div class="form-group">
+          <label>Last name</label>
+          {{input type="text" required=true placeholder="Child's last name" value=lastName class="form-control"}}
+        </div>
+        <div class="form-group">
+          <label>Birthday</label>
+          {{bootstrap-datepicker required=true value=birthday placeholder="dd/mm/yy" class="form-control"}}
+        </div>
+        <div class="form-group">
+          <label>Gender</label>
+          {{select-2
+            content=genders
+            value=gender
+            placeholder="Gender"
+            searchEnabled=false
+            required=true
+          }}
+        </div>
+        <div class="form-group">
+          <label>Club team</label>
+          {{input type="text" placeholder="Enter your child's club team" value=club class="form-control"}}
+        </div>
+        <button type="submit" name="button" class="btn btn-primary-outline">
+          Finish
+        </button>
+      </form>
+    </div>
+  </div>
 </div>
 
 {{outlet}}

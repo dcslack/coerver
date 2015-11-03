@@ -13,5 +13,7 @@ export default DS.Model.extend({
   zip: attr('string'),
   stripe: attr('string'),
   password: attr('string'),
+  cards: hasMany('card'),
   participants: hasMany('participant'),
+  registrations: hasMany('registration'),
 });
